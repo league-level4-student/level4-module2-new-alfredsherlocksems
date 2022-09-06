@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.swing.JLabel;
 
-public class Clothing extends NonFood{
+public class Clothing extends Item{
 	public Clothing() {
 		if(new Random().nextBoolean()) {
 			this.item = "clothing1.jpeg";
@@ -15,8 +15,14 @@ public class Clothing extends NonFood{
 	}
 
 	@Override
-	public JLabel getNonFood() {
+	public JLabel getItem() {
 		// TODO Auto-generated method stub
 		return new JLabel(loadImage(this.item));
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 5;
 	}
 }

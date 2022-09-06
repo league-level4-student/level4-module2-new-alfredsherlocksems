@@ -25,7 +25,7 @@ public class ScannerDemo {
          * are running your program or the input/output stream you are using.
          */
 
-        
+        Scanner scan = new Scanner(System.in);
         
         /*
          * 2. Use a syso to ask the user for their name and then use the Scanner
@@ -42,7 +42,8 @@ public class ScannerDemo {
          * String variable.
          */
 
-        
+        System.out.println("What is your name?");
+        String name = scan.next();
         
         /*
          * 3. Ask the user for their age in the console. Then use the Scanner to
@@ -51,7 +52,8 @@ public class ScannerDemo {
          * See if you can find the scanner method that does this without relying
          * on Integer.parseInt().
          */
-
+        System.out.println("How old are you?");
+        int age = scan.nextInt();
         
         
         /*
@@ -64,7 +66,10 @@ public class ScannerDemo {
 
         // 5.) Print the user's data to the console nicely formatted.
 
+        System.out.println("Do you like blue?");
+        Boolean likesBlue = scan.nextBoolean();
         
+        System.out.println("Your name is " + name + " You are " + age + " and this is whether or not you like blue: " + likesBlue + ".");
         
         /*
          * 6.) Close your scanner to avoid memory leaks.
@@ -72,7 +77,7 @@ public class ScannerDemo {
          * Note: When using a Scanner with the System.in input stream in larger
          * programs only close the scanner when your program is completely done.
          */
-
+        scan.close();
     }
 
 }

@@ -1,4 +1,4 @@
-package _06_Console_Store;
+ package _06_Console_Store;
 
 public class ConsoleStore {
 

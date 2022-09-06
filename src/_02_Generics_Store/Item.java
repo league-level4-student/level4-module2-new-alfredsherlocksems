@@ -6,10 +6,12 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public abstract class Food {
+public abstract class Item {
     String item;
 
-    public abstract JLabel getFood();
+    public abstract JLabel getItem();
+    
+    public abstract int getPrice();
 
     @SuppressWarnings("rawtypes")
     public static ImageIcon loadImage(String fileName) {
