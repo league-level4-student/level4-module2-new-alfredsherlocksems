@@ -1,5 +1,7 @@
 package _02_Generics_Store;
 
+import java.util.ArrayList;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -16,7 +18,7 @@ public class Cart<T extends Item> {
     private T[] cart;
 
     public Cart() {
-        cart = (T[]) new Item[10];
+        cart = (T[]) new Item[100];
     }
 
     // Adds an item to the cart
@@ -28,7 +30,7 @@ public class Cart<T extends Item> {
             }
         }
         JOptionPane.showMessageDialog(null,
-                "Your cart is full!\nNo more than 5 items");
+                "Your cart is full!\nNo more than 100 items");
     }
 
     // Displays everything currently in the cart
@@ -59,10 +61,22 @@ public class Cart<T extends Item> {
     	else {
     		System.out.println("Your items are: ");
     		for(int i = 0; i < cart.length; i++) {
+    			if (cart[i] != null) {
     			System.out.println(cart[i]);
+    			System.out.println("Costs " + cart[i].getPrice() + "$");
+    			}
     		}
     	}
     }
     
+    public void remove(String thing) {
+    	for (int i = 0; i < cart.length; i++) {
+    		if (cart[i].getType().equals(thing)) {
+    			cart[i] = null;
+    			return;
+    		}
+    	}
+    	System.out.println("Could not find the item you were looking for.");
+    }
  
 }

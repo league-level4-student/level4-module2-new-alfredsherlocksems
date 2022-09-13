@@ -25,4 +25,10 @@ public class Cereal extends Item{
 		// TODO Auto-generated method stub
 		return 2;
 	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return "cereal";
+	}
 }

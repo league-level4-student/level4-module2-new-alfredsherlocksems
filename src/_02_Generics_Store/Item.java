@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 
 public abstract class Item {
     String item;
+    
+    public abstract String getType();
 
     public abstract JLabel getItem();
     

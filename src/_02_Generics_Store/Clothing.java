@@ -25,4 +25,10 @@ public class Clothing extends Item{
 		// TODO Auto-generated method stub
 		return 5;
 	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return "clothing";
+	}
 }

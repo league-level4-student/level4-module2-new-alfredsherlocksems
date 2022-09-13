@@ -25,4 +25,10 @@ public class Candy extends Item{
 		// TODO Auto-generated method stub
 		return 1;
 	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return "candy";
+	}
 }
